@@ -24,7 +24,7 @@
       </div>
      <script>
 if(typeof(EventSource) !== "undefined") {
-  var source = new EventSource("test.php");
+  var source = new EventSource("stock-api.php");
   source.onmessage = function(event) {
     document.getElementById("result").innerHTML = event.data;
 	
