@@ -1,0 +1,37 @@
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <title>Current Stock</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+  
+   </head>
+   <body ng-app="postLogin" ng-controller="PostController as postCtrl">
+      <div class="container">
+         <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+            <div class="row">
+               
+            </div>
+            <div class="panel panel-default" >
+               <div class="panel-heading">
+                  <div class="panel-title text-center"> <div id="result">
+				 
+				  </div> Change Value in 3 sec</div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+     <script>
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("test.php");
+  source.onmessage = function(event) {
+    document.getElementById("result").innerHTML = event.data;
+	
+  };
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+   </body>
+</html>
