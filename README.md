@@ -8,4 +8,5 @@ stock-api.php
 
 stocks.html contain its js script
 
+<h4>Use this code for message alert,chat count,live score update,stock count </h4>
 ......
